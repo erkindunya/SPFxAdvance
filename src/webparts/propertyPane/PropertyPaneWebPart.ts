@@ -4,6 +4,7 @@ import {
 } from '@microsoft/sp-property-pane';
 
 import { PropertyPaneCounter } from "../../Controls/PropertyPaneCounter";
+import { PropertyPaneTaxRate } from "../../Controls/PropertyPaneTaxRate";
 
 import { BaseClientSideWebPart } from '@microsoft/sp-webpart-base';
 import { escape } from '@microsoft/sp-lodash-subset';
@@ -13,9 +14,10 @@ import * as strings from 'PropertyPaneWebPartStrings';
 
 export interface IPropertyPaneWebPartProps {
   count: number;
+  tax: number;
 }
 
-export default class PropertyPaneWebPart extends BaseClientSideWebPart<IPropertyPaneWebPartProps> {
+export default class PropertyPaneWebPart  extends BaseClientSideWebPart<IPropertyPaneWebPartProps> {
 
   public render(): void {
     this.domElement.innerHTML = `
@@ -25,7 +27,8 @@ export default class PropertyPaneWebPart extends BaseClientSideWebPart<IProperty
             <div class="${ styles.column }">
               <span class="${ styles.title }">Property Pane Demo!</span>
               <p class="${ styles.subTitle }">Custom PropertyPane Controls.</p>
-              <p class="${ styles.description }">${this.properties.count}</p>
+              <p class="${ styles.description }">Count: ${this.properties.count}</p>
+              <p class="${ styles.description }">Tax: ${this.properties.tax}</p>
             </div>
           </div>
         </div>
@@ -54,6 +57,15 @@ export default class PropertyPaneWebPart extends BaseClientSideWebPart<IProperty
                     this.properties.count = newValue;
                     this.render();
                   }
+                })
+                ,
+                new PropertyPaneTaxRate('tax',{
+                    label: 'Tax Rate',
+                    selectedRate: this.properties.tax,
+                    onPropertyChanged: (propName:string, newValue: number) => {
+                      this.properties.tax = newValue;
+                      this.render();
+                    }
                 })
               ]
             }
