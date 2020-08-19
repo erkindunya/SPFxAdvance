@@ -21,7 +21,8 @@
     "description": { "default": "propertyPane description" },
     "officeFabricIconFontName": "Page",
     "properties": {
-      "description": "propertyPane"
+      "count": "1.0"
+
     }
   }]
 }
