@@ -17,11 +17,38 @@
           "manifest": "./src/webparts/graphDemo/GraphDemoWebPart.manifest.json"
         }
       ]
+    },
+    "azure-func-demo-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/azureFuncDemo/AzureFuncDemoWebPart.js",
+          "manifest": "./src/webparts/azureFuncDemo/AzureFuncDemoWebPart.manifest.json"
+        }
+      ]
+    },
+    "products-field-customizer": {
+      "components": [
+        {
+          "entrypoint": "./lib/extensions/products/ProductsFieldCustomizer.js",
+          "manifest": "./src/extensions/products/ProductsFieldCustomizer.manifest.json"
+        }
+      ]
+    },
+    "course-retired-field-customizer": {
+      "components": [
+        {
+          "entrypoint": "./lib/extensions/courseRetired/CourseRetiredFieldCustomizer.js",
+          "manifest": "./src/extensions/courseRetired/CourseRetiredFieldCustomizer.manifest.json"
+        }
+      ]
     }
   },
   "externals": {},
   "localizedResources": {
     "PropertyPaneWebPartStrings": "lib/webparts/propertyPane/loc/{locale}.js",
-    "GraphDemoWebPartStrings": "lib/webparts/graphDemo/loc/{locale}.js"
+    "GraphDemoWebPartStrings": "lib/webparts/graphDemo/loc/{locale}.js",
+    "AzureFuncDemoWebPartStrings": "lib/webparts/azureFuncDemo/loc/{locale}.js",
+    "ProductsFieldCustomizerStrings": "lib/extensions/products/loc/{locale}.js",
+    "CourseRetiredFieldCustomizerStrings": "lib/extensions/courseRetired/loc/{locale}.js"
   }
 }

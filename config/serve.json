@@ -6,5 +6,40 @@
   "api": {
     "port": 5432,
     "entryPath": "node_modules/@microsoft/sp-webpart-workbench/lib/api/"
+  },
+  "serveConfigurations": {
+    "default": {
+      "pageUrl": "https://selchuk.sharepoint.com/Lists/Courses/AllItems.aspx",
+      "fieldCustomizers": {
+        "Retired": {
+          "id": "0f0a9db6-241e-4071-8dea-5dac1b5333f5",
+          "properties": {
+            "sampleText": "Value"
+          }
+        }
+      }
+    },
+    "products": {
+      "pageUrl": "https://selchuk.sharepoint.com/Lists/Courses/AllItems.aspx",
+      "fieldCustomizers": {
+        "Price": {
+          "id": "75a21ab6-ff5a-45c7-aa10-ed7c15b519e8",
+          "properties": {
+            "sampleText": "Value"
+          }
+        }
+      }
+    },
+    "courseRetired": {
+      "pageUrl": "https://selchuk.sharepoint.com/Lists/Courses/AllItems.aspx",
+      "fieldCustomizers": {
+        "Retired": {
+          "id": "0f0a9db6-241e-4071-8dea-5dac1b5333f5",
+          "properties": {
+            "sampleText": "Value"
+          }
+        }
+      }
+    }
   }
 }
