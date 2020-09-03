@@ -11,24 +11,28 @@ export interface ICourseRetiredProps {
 
 const LOG_SOURCE: string = 'CourseRetired';
 
-export default class CourseRetired extends React.Component<ICourseRetiredProps, {}> {
-  @override
-  public componentDidMount(): void {
-    Log.info(LOG_SOURCE, 'React Element: CourseRetired mounted');
-  }
+export default class CourseRetired extends React.Component<ICourseRetiredProps, any> {
+  constructor(props: ICourseRetiredProps){
+    super(props);
 
-  @override
-  public componentWillUnmount(): void {
-    Log.info(LOG_SOURCE, 'React Element: CourseRetired unmounted');
+    this.state= {
+      checked: this.props.retired
+    };
   }
 
   @override
   public render(): React.ReactElement<{}> {
     return (
       <div className={styles.cell}>
-        <Toggle onText="Yes" offText="No" checked={ this.props.retired } 
+        <Toggle onText="Yes" offText="No" defaultChecked={ this.state.checked } 
           onChange={ (event,checked) => {
-            this.props.onChanged(checked);
+            this.setState({
+              checked: !this.state.checked
+            });
+
+            if(this.props.onChanged) {
+              this.props.onChanged(checked);
+            }
         }} />
       </div>
     );
