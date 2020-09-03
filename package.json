@@ -12,20 +12,22 @@
     "test": "gulp test"
   },
   "dependencies": {
+    "@microsoft/decorators": "1.10.0",
     "@microsoft/sp-core-library": "1.10.0",
-    "@microsoft/sp-property-pane": "1.10.0",
-    "@microsoft/sp-webpart-base": "1.10.0",
+    "@microsoft/sp-listview-extensibility": "1.10.0",
     "@microsoft/sp-lodash-subset": "1.10.0",
     "@microsoft/sp-office-ui-fabric-core": "1.10.0",
-    "@types/webpack-env": "1.13.1",
+    "@microsoft/sp-property-pane": "1.10.0",
+    "@microsoft/sp-webpart-base": "1.10.0",
+    "@pnp/graph": "^2.0.8",
+    "@pnp/sp": "^2.0.8",
     "@types/es6-promise": "0.0.33",
-    "@microsoft/decorators": "1.10.0",
-    "@microsoft/sp-listview-extensibility": "1.10.0",
-    "react": "16.8.5",
-    "react-dom": "16.8.5",
     "@types/react": "16.8.8",
     "@types/react-dom": "16.8.3",
-    "office-ui-fabric-react": "6.189.2"
+    "@types/webpack-env": "1.13.1",
+    "office-ui-fabric-react": "6.189.2",
+    "react": "16.8.5",
+    "react-dom": "16.8.5"
   },
   "devDependencies": {
     "@microsoft/sp-build-web": "1.10.0",
